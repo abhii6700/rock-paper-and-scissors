@@ -4,14 +4,16 @@
   box-sizing: border-box;
 }
 
-section {
-  height: 100vh;
+body {
+  background-repeat: no-repeat;
+
   font-family: sans-serif;
   background-color: rgb(32, 45, 64);
 }
 
 .score {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   height: 20vh;
@@ -31,6 +33,7 @@ section {
 .intro {
   height: 50vh;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -59,7 +62,6 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   height: 50vh;
   justify-content: space-around;
   color: rgb(228, 228, 228);
@@ -74,6 +76,7 @@ section {
 .hands,
 .options {
   display: flex;
+
   justify-content: space-around;
   align-items: center;
 }
@@ -149,5 +152,68 @@ section {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+@media only screen and (max-width: 615px) {
+  .score h2 {
+    font-size: 20px;
+  }
+
+  .score p {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    color: rgb(228, 228, 228);
+  }
+
+  .intro h1 {
+    padding-top: 30px;
+    font-size: 25px;
+  }
+
+  .match button {
+    height: 40px;
+    width: 80px;
+    border: none;
+    font-size: 17px;
+    font-weight: 500px;
+    border-radius: 3px;
+    background-color: rgb(192, 192, 20);
+    cursor: pointer;
+  }
+
+  .match {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 60px;
+    height: 50vh;
+    justify-content: space-around;
+    color: rgb(228, 228, 228);
+    transition: opacity 0.5s ease 0.5s;
+  }
+
+  .winner {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .hands {
+    display: flex;
+  }
+
+  .hands img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .options {
+    padding-top: 40px;
+  }
+
+  .winner {
+    padding-bottom: 30px;
   }
 }
